@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/field_email"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/rounded_corner_e6e6e6_fill"
+            android:ems="10"
+            android:hint="Please enter your email or ID."
+            android:inputType="textEmailAddress"
+            android:paddingStart="15dp"
+            android:textSize="13sp"
+            tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+
+
+        <EditText
+            android:id="@+id/field_password"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/rounded_corner_e6e6e6_fill"
+            android:ems="10"
+            android:hint="Please enter at least 6 characters for the password."
+            android:inputType="textPassword"
+            android:paddingStart="15dp"
+            android:textSize="13sp"
+            tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+
+    </LinearLayout>
+
+</merge>

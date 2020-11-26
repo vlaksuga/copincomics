@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".pages.pMyPage.TransactionActivity">
+
+    <include layout="@layout/merge_top_title_with_backbtn" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:text="* Transaction history last for 90 days \n* Valid dates for the Bonus Coins can vary, and can be checked on Details"
+        android:textColor="#ACACAC"
+        android:textSize="10sp" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border_E1"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/transaction_caution"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:elevation="10dp"
+            android:src="@mipmap/img_caution"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.235" />
+
+        <TextView
+            android:id="@+id/transaction_caution_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:elevation="10dp"
+            android:text="No recent transaction history\n
+Transaction history last for 90 days"
+            android:textColor="#B7B7B7"
+            app:layout_constraintEnd_toEndOf="@+id/transaction_caution"
+            app:layout_constraintStart_toStartOf="@+id/transaction_caution"
+            app:layout_constraintTop_toBottomOf="@+id/transaction_caution" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

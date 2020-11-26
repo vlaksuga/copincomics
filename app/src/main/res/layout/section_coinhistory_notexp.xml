@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/expandable_main_thumbnail"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@mipmap/img_charge" />
+
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/expandable_main_title"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_width="match_parent"
+            android:text="Purchase Coins"
+            android:textSize="13sp" />
+
+
+        <TextView
+            android:id="@+id/expandable_main_date"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:layout_width="match_parent"
+            android:text="2020.00.00 99:99"
+            android:textColor="#9b9b9b"
+            android:textSize="@dimen/text11" />
+    </LinearLayout>
+
+    <TextView
+        android:gravity="center_vertical"
+        android:id="@+id/expandable_charged_coin"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:text="22 Coin"
+        android:textColor="@color/orange"
+        android:textSize="12sp" />
+
+
+</LinearLayout>
+

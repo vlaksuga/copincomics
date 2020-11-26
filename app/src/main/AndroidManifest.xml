@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.copincomics.copinapp">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/icon_round"
+        android:label="Copin"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/icon_circle"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="false" />
+
+        <activity android:name=".pages.pPDpick.PdPickActivity" />
+        <activity android:name=".pages.pHome.DetailListActivity" /> <!-- [START fcm_disable_auto_init] -->
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="false" /> <!-- [END fcm_disable_auto_init] -->
+        <!--
+ Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/orange" />
+
+        <activity android:name=".pages.pMyPage.TransactionActivity" />
+        <activity android:name=".pages.pAccount.ChangeProfileActivity" />
+        <activity android:name=".pages.pAccount.ChangePWActivity" />
+        <activity android:name=".pages.pMyPage.NoticeActivity" />
+        <activity android:name=".pages.pMyPage.ContactActivity" />
+        <activity android:name=".pages.pMyPage.CustomerServiceActivity" />
+        <activity android:name=".pages.pMyPage.PayActivity" />
+        <activity android:name=".pages.pPay.NativePayActivity" />
+        <activity android:name=".pages.pMyPage.PromotionActivity" />
+        <activity android:name=".pages.pEpiList.EpiListActivity" />
+        <activity android:name=".pages.pSetting.SettingActivity" />
+        <activity android:name=".pages.pAccount.SignupActivity" />
+        <activity android:name=".pages.pAccount.FindpwActivity" />
+        <activity android:name=".pages.pAccount.LoginActivity" />
+        <activity
+            android:name=".pages.pSearch.SearchActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".pages.pMyPage.MyPageActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".pages.pHome.HomeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".pages.Entry"
+            android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".tools.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

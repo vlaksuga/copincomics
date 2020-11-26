@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".pages.pSearch.SearchActivity">
+
+    <include layout="@layout/merge_top_title_with_finishbtn" />
+
+
+    <EditText
+        android:id="@+id/search_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_corner_e6e6e6_fill"
+        android:ems="10"
+        android:hint="Please enter a search term"
+        android:inputType="textPersonName"
+        android:paddingHorizontal="15dp"
+        android:text=""
+        android:textColorHint="#6e6e6e"
+        android:textSize="14sp"
+        android:importantForAutofill="no"
+        tools:ignore="HardcodedText" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="14dp"
+                android:background="#e2e2e2" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/search_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

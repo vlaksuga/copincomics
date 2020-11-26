@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:isScrollContainer="false"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    app:layout_scrollFlags="scroll">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--        <TextView-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="daily"-->
+        <!--            android:textColor="@color/orange" />-->
+
+        <!--        Tab-->
+        <com.copincomics.copinapp.tools.NestedScrollableHost
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/tab_unselected_indicator_color"
+                app:tabIndicatorColor="@color/orange"
+                app:tabMode="auto"
+                app:tabRippleColor="@color/transparent"
+                app:tabSelectedTextColor="@color/orange"
+                app:tabTextAppearance="@style/TabText"
+                app:tabTextColor="@color/black" />
+
+            <!--            <com.google.android.material.tabs.TabLayout-->
+            <!--                android:id="@+id/tabs"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="50dp"-->
+            <!--                app:tabMode="auto"-->
+            <!--                app:tabTextAppearance="@style/TabText" />-->
+
+        </com.copincomics.copinapp.tools.NestedScrollableHost>
+
+        <!--        banner-->
+        <com.copincomics.copinapp.tools.NestedScrollableHost
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/banner_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:layout_marginStart="16dp"
+                app:tabBackground="@drawable/tab_banner_indicator"
+                app:tabGravity="fill"
+                app:tabIndicatorHeight="0dp"
+                app:tabMaxWidth="10dp" />
+        </com.copincomics.copinapp.tools.NestedScrollableHost>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+        <!--        list view -->
+        <com.copincomics.copinapp.tools.NestedScrollableHost
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="always"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </com.copincomics.copinapp.tools.NestedScrollableHost>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+

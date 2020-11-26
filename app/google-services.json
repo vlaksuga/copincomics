@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "283524101729",
+    "firebase_url": "https://conpincomics.firebaseio.com",
+    "project_id": "conpincomics",
+    "storage_bucket": "conpincomics.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:283524101729:android:9f3a7823ce4a7ddd431c20",
+        "android_client_info": {
+          "package_name": "com.copincomics.copinapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "283524101729-oifulcsnlitkk84d769ohih1gf581en6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.copincomics.copinapp",
+            "certificate_hash": "f3b305a224e853ac585903d6811f25714ac66f18"
+          }
+        },
+        {
+          "client_id": "283524101729-0p9gao6gk0caom73ru4idjpsg5bkdvge.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOKUFRFfG3mYRNK4U8c_VE3noAnsdga3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "283524101729-t5dun1fus22ou7loglcqc6uqbp2fhnjs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "283524101729-dfb6dvcd7gsjbos51ipptnanecmms2ks.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.copin.copincomics"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
